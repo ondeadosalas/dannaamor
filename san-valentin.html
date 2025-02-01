@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #666;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body><div class="container">
+    <h1>¿Quieres ser mi San Valentín? ❤</h1>
+    <button class="btn yes" onclick="showMessage()">¡Sí, claro! 💖</button>
+    <button class="btn no" onclick="moveButton(this)">No... 😢</button>
+    <p id="message" class="hidden">¡Sabía que dirías que sí! Te amo ❤🥰</p>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById('message').classList.remove('hidden');
+    }
+
+    function moveButton(button) {
+        button.style.position = 'absolute';
+        button.style.left = Math.random() * window.innerWidth + 'px';
+        button.style.top = Math.random() * window.innerHeight + 'px';
+    }
+</script>
+
+</body>
+</html>
